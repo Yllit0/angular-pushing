@@ -22,7 +22,7 @@ export class AppComponent {
    Record['name'] = this.employeeName;
    Record['age'] = this.employeeAge;
    Record['address'] = this.employeeAddress;
-  
+
    this.crudservice.create_Newemployee(Record).then(res => {
       this.employeeName = "";
       this.employeeAge = undefined;
@@ -31,6 +31,7 @@ export class AppComponent {
       this.message = "Employee data save Done";
    }).catch(error => {
      console.log(error);
+
    })
   }
 
